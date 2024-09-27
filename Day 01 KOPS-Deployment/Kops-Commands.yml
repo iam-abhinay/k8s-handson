@@ -18,7 +18,7 @@ export EDITOR='/usr/bin/nano'
 
 # Create a Cluster using Kops and generate a cluster file and save it carefully and do neccessary changes
 
-kops create cluster --name=devopswithabhi.xyz\
+kops create cluster --name=devopswithabhi.xyz \
 --state=s3://devopswithabhi.xyz --zones=us-east-1a,us-east-1b \
 --node-count=2 --control-plane-count=1 --node-size=t3.medium --control-plane-size=t3.medium \
 --control-plane-zones=us-east-1a --control-plane-volume-size 10 --node-volume-size 10 \
