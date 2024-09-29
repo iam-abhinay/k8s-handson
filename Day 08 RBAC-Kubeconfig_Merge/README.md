@@ -29,6 +29,8 @@ Create two namespaces: `development` and `production`.
 ### 3. Copy CA Certificates
 
 Copy the following files from the master to the management server:
+command- find / -name kops-controller
+/etc/kubernetes/kops-controller - location of kubernete-ca.crt and kuberetes-ca.key
 - `ca.crt`
 - `ca.key`
 
