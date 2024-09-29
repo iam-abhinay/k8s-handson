@@ -29,7 +29,7 @@ spec:
            volumeID: vol-0ada04060b90d6649
            fsType: ext4
       nodeSelector:
-          kubernetes.io/hostname: i-087083e53cfff1892
+          kubernetes.io/hostname: i-055da9f0696ec6d1e
 
 
 # db.movie.insert({"name":"Fast & Furious 1"})
