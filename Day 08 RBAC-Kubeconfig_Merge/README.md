@@ -86,9 +86,9 @@ Create roles and role bindings for the users, including:
 For the administrator `user1`:
 
 ```bash
-openssl genrsa -out user1.key 2048
-openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/O=development"
-openssl x509 -req -in user1.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user1.crt -days 365
+openssl genrsa -out abhinay.key 2048
+openssl req -new -key abhinay.key -out abhinay.csr -subj "/CN=abhinay/O=clusteradmin"
+openssl x509 -req -in abhinay.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out abhinay.crt -days 365
 ```
 
 Copy all `.crt` and `.key` files to the master root location safely.
