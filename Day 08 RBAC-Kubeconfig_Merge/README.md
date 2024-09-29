@@ -108,4 +108,4 @@ export KUBECONFIG=USER1-CONFIG:USER2-CONFIG:ABHINAY-CONFIG
 kubectl config view --merge --flatten > mixed-config.txt
 ```
 
-Portainer tool-to get real time info of the cluster like pods,volumes,secrets,network policies etc.,
+Portainer tool- It is a web based tool to get real time info of the cluster like pods,volumes,secrets,network policies etc., and can be installed using helm or k8s manifests in the cluster and can access it from the browser.
