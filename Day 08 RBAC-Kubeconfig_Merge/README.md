@@ -104,6 +104,8 @@ export KUBECONFIG=/root/user1-CONFIG
 To combine multiple config files into one:
 
 ```bash
-export KUBECONFIG=USER1-CONFIG:USER2-CONFIG:SAIKIRAN-CONFIG
+export KUBECONFIG=USER1-CONFIG:USER2-CONFIG:ABHINAY-CONFIG
 kubectl config view --merge --flatten > mixed-config.txt
 ```
+
+Portainer tool-to get real time info of the cluster like pods,volumes,secrets,network policies etc.,
