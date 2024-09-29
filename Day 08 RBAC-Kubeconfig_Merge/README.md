@@ -34,14 +34,14 @@ Copy the following files from the master to the management server:
 
 ### 4. Create Users
 
-#### User 1: `saikiran`
+#### User 1: `user1`
 
 Generate the key and certificate:
 
 ```bash
-openssl genrsa -out saikiran.key 2048
-openssl req -new -key saikiran.key -out saikiran.csr -subj "/CN=saikiran/O=clusteradmin"
-openssl x509 -req -in saikiran.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out saikiran.crt -days 365
+openssl genrsa -out user1.key 2048
+openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/O=development"
+openssl x509 -req -in user1.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user1.crt -days 365
 ```
 
 #### User 2: `user2`
@@ -81,12 +81,12 @@ Create roles and role bindings for the users, including:
 
 ### 8. Admin User Configuration
 
-For the administrator `saikiran`:
+For the administrator `user1`:
 
 ```bash
-openssl genrsa -out saikiran.key 2048
-openssl req -new -key saikiran.key -out saikiran.csr -subj "/CN=saikiran/O=development"
-openssl x509 -req -in saikiran.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out saikiran.crt -days 365
+openssl genrsa -out user1.key 2048
+openssl req -new -key user1.key -out user1.csr -subj "/CN=user1/O=development"
+openssl x509 -req -in user1.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out user1.crt -days 365
 ```
 
 Copy all `.crt` and `.key` files to the master root location safely.
@@ -94,7 +94,7 @@ Copy all `.crt` and `.key` files to the master root location safely.
 Create the admin config file:
 
 ```bash
-export KUBECONFIG=/root/saikiran-CONFIG
+export KUBECONFIG=/root/user1-CONFIG
 ```
 
 ### 9. Merge Config Files
