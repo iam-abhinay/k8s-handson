@@ -1,6 +1,6 @@
-kubectl label node i-007d6a517ab67f906 env=one
-kubectl label node i-080151329a9fb1c6d env=two
-kubectl label node i-08fd11925e913b080 env=three
+kubectl label node i-0c39eb81216774c40 env=one
+kubectl label node i-03febc93867c8dae6 env=two
+kubectl label node i-02f25ad93412e6272 env=three
 
 ---
 apiVersion: apps/v1
