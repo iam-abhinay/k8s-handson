@@ -9,14 +9,14 @@ kubectl label ns dev nsp=dev
 kubectl label ns qa nsp=qa
 
 #Deploy  pod in all namespaces
-ku run -n prod prod1 --image=kiran2361993/troubleshootingtools:v1 -l ns=prod
-ku run -n prod prod2 --image=kiran2361993/troubleshootingtools:v1 -l ns=prod
+ku run -n prod prod1 --image=abhinay1619/troubleshootingtools:v1 -l ns=prod
+ku run -n prod prod2 --image=abhinay1619/troubleshootingtools:v1 -l ns=prod
 
-ku run -n dev dev1 --image=kiran2361993/troubleshootingtools:v1 -l ns=dev
-ku run -n dev dev2 --image=kiran2361993/troubleshootingtools:v1 -l ns=dev
+ku run -n dev dev1 --image=abhinay1619/troubleshootingtools:v1 -l ns=dev
+ku run -n dev dev2 --image=abhinay1619/troubleshootingtools:v1 -l ns=dev
 
-ku run -n qa qa1 --image=kiran2361993/troubleshootingtools:v1 --labels ns=qa
-ku run -n qa qa2 --image=kiran2361993/troubleshootingtools:v1 --labels ns=qa
+ku run -n qa qa1 --image=abhinay1619/troubleshootingtools:v1 --labels ns=qa
+ku run -n qa qa2 --image=abhinay1619/troubleshootingtools:v1 --labels ns=qa
 
 ku get po -n prod -o wide --no-headers && ku get po -n dev -o wide --no-headers && ku get po -n qa -o wide --no-headers
 
@@ -24,19 +24,19 @@ alias allpods='ku get po -n prod -o wide --no-headers && ku get po -n dev -o wid
 
 
 
-ku exec -it  prod1 -n prod -- ping -c 3  100.106.150.83 \
-&& ku exec -it  prod2 -n prod -- ping -c 3  100.97.52.10 \
-&& ku exec -it  prod1 -n prod -- ping -c 3   100.106.150.84     \
-&& ku exec -it  prod2 -n prod -- ping -c 3   100.99.93.24
+ku exec -it  prod1 -n prod -- ping -c 3  100.109.63.69 \
+&& ku exec -it  prod2 -n prod -- ping -c 3  100.118.134.5 \
+&& ku exec -it  prod1 -n prod -- ping -c 3   100.96.42.197     \
+&& ku exec -it  prod2 -n prod -- ping -c 3   100.109.63.70
 
 
-ku exec -it  dev1 -n dev -- ping -c 3    100.106.150.84 \
-&& ku exec -it  dev2 -n dev -- ping -c 3  100.99.93.24 \
-&& ku exec -it  dev1 -n dev -- ping -c 3   100.99.93.22    \
-&& ku exec -it  dev2 -n dev -- ping -c 3 100.99.93.23 
+ku exec -it  dev1 -n dev -- ping -c 3    100.109.63.68 \
+&& ku exec -it  dev2 -n dev -- ping -c 3  100.96.42.196 \
+&& ku exec -it  dev1 -n dev -- ping -c 3   100.96.42.197 \
+&& ku exec -it  dev2 -n dev -- ping -c 3 100.109.63.70
 
 
-ku exec -it  qa1 -n qa -- ping -c 3     100.99.93.22  \
-&& ku exec -it  qa2 -n qa -- ping -c 3   100.99.93.23  \
-&& ku exec -it  qa1 -n qa -- ping -c 3  100.106.150.83 \
-&& ku exec -it  qa2 -n qa -- ping -c 3   100.97.52.10
+ku exec -it  qa1 -n qa -- ping -c 3     100.109.63.69  \
+&& ku exec -it  qa2 -n qa -- ping -c 3   100.118.134.5  \
+&& ku exec -it  qa1 -n qa -- ping -c 3  100.109.63.68 \
+&& ku exec -it  qa2 -n qa -- ping -c 3   100.96.42.196
