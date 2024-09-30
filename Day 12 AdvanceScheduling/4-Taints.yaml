@@ -1,3 +1,8 @@
+kubectl taint node i-0c39eb81216774c40 high-cpu=yes:NoSchedule
+kubectl taint node i-03febc93867c8dae6 med-cpu=yes:NoSchedule
+kubectl taint node i-02f25ad93412e6272 low-cpu=yes:NoSchedule
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
