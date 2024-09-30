@@ -1,5 +1,5 @@
-ku run trouble1 --image=kiran2361993/troubleshootingtools:v1 -n default
-ku run trouble2 --image=kiran2361993/troubleshootingtools:v1 -n default
+ku run trouble1 --image=abhinay1619/troubleshootingtools -n default
+ku run trouble2 --image=abhinay1619/troubleshootingtools -n default
 
 ---
 kind: NetworkPolicy
