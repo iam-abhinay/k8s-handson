@@ -96,7 +96,7 @@ Copy all `.crt` and `.key` files to the master root location safely.
 Create the admin config file:
 
 ```bash
-export KUBECONFIG=/root/user1-CONFIG
+export KUBECONFIG=/root/ABHINAY-CONFIG
 ```
 
 ### 9. Merge Config Files
