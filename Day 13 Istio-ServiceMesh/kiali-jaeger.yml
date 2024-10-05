@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "tools.cloudvishwakarma.in"
+    - "tools.devopswithabhi.xyz"
     tls:
      httpsRedirect: true
   - port:
