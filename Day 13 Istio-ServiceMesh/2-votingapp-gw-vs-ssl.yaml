@@ -14,9 +14,9 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "vote.cloudvishwakarma.in"
-    - "result.cloudvishwakarma.in"
-    - "www.cloudvishwakarma.in"
+    - "vote.devopswithabhi.xyz"
+    - "result.devopswithabhi.xyz"
+    - "www.devopswithabhi.xyz"
     tls:
      httpsRedirect: true
   - port:
@@ -24,9 +24,9 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "vote.cloudvishwakarma.in"
-    - "result.cloudvishwakarma.in"
-    - "www.cloudvishwakarma.in"
+    - "vote.devopswithabhi.xyz"
+    - "result.devopswithabhi.xyz"
+    - "www.devopswithabhi.xyz"
     tls:
       credentialName: my-tls-secret # this should match with Certificate secretName
       mode: SIMPLE
@@ -40,8 +40,8 @@ metadata:
   name: vote
 spec:
   hosts:
-  - "vote.cloudvishwakarma.in"
-  - "www.cloudvishwakarma.in"
+  - "vote.devopswithabhi.xyz"
+  - "www.devopswithabhi.xyz"
   gateways:
   - app-gateway
   http:
@@ -61,7 +61,7 @@ metadata:
   name: result
 spec:
   hosts:
-  - "result.cloudvishwakarma.in"
+  - "result.devopswithabhi.xyz"
   gateways:
   - app-gateway
   http:
