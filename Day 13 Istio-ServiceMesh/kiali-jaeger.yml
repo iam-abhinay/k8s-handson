@@ -20,7 +20,7 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "tools.cloudvishwakarma.in"
+    - "tools.devopswithabhi.xyz"
     tls:
       credentialName: my-tls-secret # this should match with Certificate secretName
       mode: SIMPLE
@@ -34,7 +34,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "tools.cloudvishwakarma.in"
+  - "tools.devopswithabhi.xyz"
   gateways:
   - tools-gateway
   http:
@@ -55,7 +55,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "tools.cloudvishwakarma.in"
+  - "tools.devopswithabhi.xyz"
   gateways:
   - tools-gateway
   http:
