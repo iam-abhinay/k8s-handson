@@ -63,6 +63,8 @@ kubectl get services -n prom
 
 ### Step 5: Port Forwarding for Prometheus and Grafana
 
+Here portforwarding is done using Lens desktop application by adding kubernetes cluster using kubeconfig file of the cluster in the lens.
+
 Access Prometheus and Grafana through port forwarding:
 
 - **Prometheus:**
