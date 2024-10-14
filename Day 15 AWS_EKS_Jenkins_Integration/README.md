@@ -36,11 +36,12 @@ Before you begin, ensure you have the following:
   sudo apt install -y unzip
   ```
   aws cli install
-  
+   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   unzip awscliv2.zip
   sudo ./aws/install
-
+  ```
+  
 ### **2. Install kubectl**
 
 ```bash
