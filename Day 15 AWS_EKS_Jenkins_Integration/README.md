@@ -33,8 +33,13 @@ Before you begin, ensure you have the following:
 - SSH into your instance and install the required dependencies:
   ```bash
   sudo apt update
-  sudo apt install -y unzip awscli openjdk-11-jdk
+  sudo apt install -y unzip
   ```
+  aws cli install
+  
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
 
 ### **2. Install kubectl**
 
